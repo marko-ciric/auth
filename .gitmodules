@@ -1,0 +1,6 @@
+[submodule "permissions"]
+	path = permissions
+	url = git@github.com:marko-ciric/permissions.git
+[submodule "tokens"]
+	path = tokens
+	url = git@github.com:marko-ciric/tokens.git

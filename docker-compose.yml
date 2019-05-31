@@ -1,0 +1,12 @@
+version: "3.7"
+services:
+  tokens:
+    build: ./tokens
+    dockerfile: Dockerfile
+  permissions:
+    build: ./tokens
+    dockerfile: Dockerfile
+    depends_on:
+      - graphdb
+  graphdb:
+    image: arangodb
