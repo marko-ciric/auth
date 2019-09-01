@@ -1,7 +1,14 @@
 version: "3.7"
 services:
   tokens:
-    build: ./tokens
+    build: 
+      context: ./tokens
+      target: builder 
+    volumes:
+      - "./tokens:/app"
+    environment:
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
     depends_on:
       - redis
   permissions:
